@@ -1,14 +1,14 @@
 <?php
-// 1. Descargar la página
-$url = "https://memorial.com.do/obituarios/";
-$html = file_get_contents($url);
+    // 1. Descargar la página
+    $url = "https://memorial.com.do/obituarios/";
+    $html = file_get_contents($url);
 
-// 2. Cargar el HTML en DOMDocument
-$doc = new DOMDocument();
-@$doc->loadHTML($html);
+    // 2. Cargar el HTML en DOMDocument
+    $doc = new DOMDocument();
+    @$doc->loadHTML($html);
 
-// 3. Buscar etiquetas <h2>
-$tags = $doc->getElementsByTagName("h3");
+    // 3. Buscar etiquetas <h2>
+    $tags = $doc->getElementsByTagName("h3");
 ?>
 
 <!DOCTYPE html>
