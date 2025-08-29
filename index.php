@@ -9,12 +9,8 @@ $doc = new DOMDocument();
 
 // 3. Buscar etiquetas <h2>
 $tags = $doc->getElementsByTagName("h3");
-
-// 4. Mostrar resultados
-foreach ($tags as $tag) {
-    echo trim($tag->nodeValue) . PHP_EOL;
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,7 +25,7 @@ foreach ($tags as $tag) {
         <!-- Los obituarios se mostrarán aquí -->
         <?php
         foreach ($tags as $tag) {
-            echo "<h2>" . htmlspecialchars(trim($tag->nodeValue)) . "</h2>";
+            echo "<h3>" . htmlspecialchars(trim($tag->nodeValue)) . "</h3>";
         }
         ?>
 
